@@ -1,2 +1,84 @@
 .offer
 	display block
+	overflow hidden
+	&__in
+		@extends .in
+		padding-top 10px
+		padding-bottom 50px
+	&__title
+		@extends .title
+		margin-bottom 20px
+	&__list
+		font-size 0
+		text-align center
+		+r($d)
+			text-align left
+
+	&__item
+		margin-right 18px
+		margin-right ratio-percentage(18, $d-l)
+		margin-bottom 18px
+		width 415px
+		width ratio-percentage(415,$d-l)
+		min-height 344px
+		display inline-block
+		vertical-align top
+		background url(../images/general/pattern.jpg) 0 0 repeat
+		text-align left
+		&:last-child
+			margin-right 0
+		+r($d)
+			width 48.5%
+		+r($t)
+			margin-right 0
+			width 100%
+	&__link
+		display block
+		text-decoration none
+		color #636362
+	&__image
+		margin-bottom 33px
+		min-height 132px
+		text-align center
+		img
+			max-width 100%
+			height auto
+	&__item-title,
+	&__text,
+	&__feature-item
+		padding-left 35px
+		padding-right 30px
+		color #636362
+	&__item-title
+		margin-bottom 10px
+		font-size 23px
+	&__text,
+	&__feature-item
+		font-size 17px
+		line-height 20px
+	&__text
+		margin-bottom 49px
+		padding-left 0
+		padding-right 0
+	// &__form
+
+
+	.offer__item_questions
+		padding-top 40px
+		padding-right 26px
+		padding-bottom 60px
+		padding-left 26px
+		text-align center
+		+r($d)
+			margin-right 0
+			width 98%
+			margin-bottom 16px
+			min-height 202px
+		+r($t)
+			width 100%
+		.offer__text
+			+r($d)
+				margin-bottom 30px
+		.form__field
+			margin-left 14px
+			display inline-block

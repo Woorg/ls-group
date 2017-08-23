@@ -1,3 +1,29 @@
 mixin footer()
-	+b.footer&attributes(attributes)
-		block
+	footer.footer
+		.footer__in
+			.footer__row
+				.footer__logo.logo.logo_second Ls group
+				nav.footer__nav.nav.nav_second
+					ul.nav__list
+						li.nav__item
+							a.nav__link(href="#link") Главная
+						li.nav__item
+							a.nav__link(href="#link") О компании
+						li.nav__item
+							a.nav__link(href="#link") Статьи
+						li.nav__item
+							a.nav__link(href="#link") Каталог
+						li.nav__item
+							a.nav__link(href="#link") Портфолио
+						li.nav__item
+							a.nav__link(href="#link") Вопрос-ответ
+						li.nav__item
+							a.nav__link(href="#link") Контакты
+				.footer__form.form
+					form(action="" method='post')
+						input.form__field.form__field_phone(type="text", placeholder="8-___-___-__-__", value="")
+						input.form__field.form__field_submit(type="submit", value="Заказать звонок")
+			.footer__row
+				p.footer__copyright 2017 - 2017
+
+

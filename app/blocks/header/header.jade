@@ -1,3 +1,110 @@
 mixin header()
-	+b.header&attributes(attributes)
-		block
+	header.header
+		.header__row.header__row_top
+			.header__in
+				a.header__logo.logo(href="/") Ls group
+				nav.nav.header__hide
+					label.nav__trigger(for="nav-trigger") Меню
+					input.nav__check#nav-trigger(type="checkbox")
+					ul.nav__list
+						li.nav__item.current-menu-item
+							a.nav__link(href="#item") Главная
+						li.nav__item
+							a.nav__link(href="#item") О компании
+						li.nav__item
+							a.nav__link(href="#item") Статьи
+						li.nav__item.nav__item_submenu
+							a.nav__link(href="#item") Каталог
+
+							.submenu
+								.submenu__menu
+									h2.submenu__title
+										a.submenu__link(href="#") Фрезерные станки с ЧПУ
+									ul.submenu__list
+										li.submenu__item
+											a.submenu__link(href="#") — по неметаллам
+										li.submenu__item
+											a.submenu__link(href="#") — по металлам
+										li.submenu__item
+											a.submenu__link(href="#") — по камню
+								.submenu__menu
+									h2.submenu__title
+										a.submenu__link(href="#") Фрезерные станки с ЧПУ с АТС
+
+								.submenu__menu
+									h2.submenu__title
+										a.submenu__link(href="") Лазерные станки
+									ul.submenu__list
+										li.submenu__item
+											a.submenu__link(href="#") — по неметаллам
+										li.submenu__item
+											a.submenu__link(href="#") — по металлам
+										li.submenu__item
+											a.submenu__link(href="#") — по камню
+
+								.submenu__menu
+									h2.submenu__title
+										a.submenu__link(href="#") Сервис и обслуживание
+
+						li.nav__item
+							a.nav__link(href="#item") Портфолио
+						li.nav__item
+							a.nav__link(href="#item") Вопрос-ответ
+						li.nav__item
+							a.nav__link(href="#item") Контакты
+
+				.header__slogan Станки с числовым программным управлением
+				a.header__button(href="#button") Обратный звонок
+				.header__contacts.contacts
+					a.contacts__phone(href="tel:89092784589") +7 909 278 45 89
+					a.contacts__email(href="mailto:lebmaks05@mail.ru") lebmaks05@mail.ru
+		.header__row.header__row_bottom
+			.header__in
+				nav.header__nav.nav
+					label.nav__trigger(for="nav-trigger-1") Меню
+					input.nav__check#nav-trigger-1(type="checkbox")
+					ul.nav__list
+						li.nav__item.current-menu-item
+							a.nav__link(href="#item") Главная
+						li.nav__item
+							a.nav__link(href="#item") О компании
+						li.nav__item
+							a.nav__link(href="#item") Статьи
+						li.nav__item.nav__item_submenu
+							a.nav__link(href="#item") Каталог
+							.submenu
+								.submenu__menu
+									h2.submenu__title
+										a.submenu__link(href="#") Фрезерные станки с ЧПУ
+									ul.submenu__list
+										li.submenu__item
+											a.submenu__link(href="#") — по неметаллам
+										li.submenu__item
+											a.submenu__link(href="#") — по металлам
+										li.submenu__item
+											a.submenu__link(href="#") — по камню
+								.submenu__menu
+									h2.submenu__title
+										a.submenu__link(href="#") Фрезерные станки с ЧПУ с АТС
+
+								.submenu__menu
+									h2.submenu__title
+										a.submenu__link(href="") Лазерные станки
+									ul.submenu__list
+										li.submenu__item
+											a.submenu__link(href="#") — по неметаллам
+										li.submenu__item
+											a.submenu__link(href="#") — по металлам
+										li.submenu__item
+											a.submenu__link(href="#") — по камню
+
+								.submenu__menu
+									h2.submenu__title
+										a.submenu__link(href="#") Сервис и обслуживание
+
+						li.nav__item
+							a.nav__link(href="#item") Портфолио
+						li.nav__item
+							a.nav__link(href="#item") Вопрос-ответ
+						li.nav__item
+							a.nav__link(href="#item") Контакты

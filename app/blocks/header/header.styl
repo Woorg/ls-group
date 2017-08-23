@@ -1,2 +1,309 @@
 .header
-	display block
+	&__in
+		@extends .in-second
+		padding-top 24px
+		padding-bottom 18px
+	&__row
+		clearfix()
+	&__row_top
+		background #FFF
+	&__row_bottom
+		background #4a65ac url(../images/general/menu.jpg) 0 0 repeat-x
+		.header__in
+			padding-top 0
+			padding-bottom 0
+	&__row_sticky
+		position fixed
+		z-index 10
+		top 0
+		left 0
+		right 0
+		background #4a65ac url(../images/general/menu.jpg) 0 0 repeat-x
+		+r($d)
+			background #FFF
+		.header__in
+			padding-top 0
+			padding-bottom 0
+		.logo
+			margin-top 12px
+			sprite($logo_sticky)
+		.nav
+			margin-left 40px
+			clearfix()
+
+		.nav__list
+			&:after
+				display none
+			a
+				padding-top 13px
+			// 	padding-bottom 16px
+
+		.header__button
+			@extends .button-small
+			margin-left 22px
+			margin-top 10px
+			height 34px
+			+r($d)
+				display none
+		.header__contacts
+			margin-top 6px
+			margin-left 12px
+			a
+				font-size 17px
+				color #FFF
+
+	&__logo,
+	&__slogan,
+	&__button,
+	&__contacts
+		display inline-block
+		vertical-align top
+		font-size 19px
+		color #636362
+		line-height 1
+		+r($t-s)
+			display block
+	&__logo
+		+r($t-s)
+			margin 0 auto 10px
+
+	&__slogan
+		margin-left 188px
+		margin-top 19px
+		color #636362
+		+r($d-l)
+			margin-left 54px
+			margin-left ratio-percentage(54, $d-l)
+		+r($d)
+			margin-top 6px
+			margin-left 6px
+			width 232px
+			text-align center
+		+r($t)
+			width 200px
+			font-size 16px
+		+r($t-s)
+			margin 0 auto 10px
+	&__button
+		margin-left 164px
+		@extends .button
+		height 50px
+		color #FFF
+		+r($d-l)
+			margin-left 55px
+			margin-left ratio-percentage(55, 1320)
+		+r($d)
+			margin-left 16px
+
+		+r($t)
+			display none
+	&__contacts
+		margin-left 46px
+		margin-top 6px
+		float right
+		+r($d-l)
+			margin-left 26px
+		+r($d)
+			margin-left 6px
+		+r($t)
+			float right
+		+r($t-s)
+			float none
+			margin-left 0
+			text-align center
+
+
+.logo
+	sprite($logo)
+	hide-text()
+.logo_second
+	sprite($logo_second)
+.contacts
+	// width 152px
+	text-align right
+	font-size 19px
+	color #4d4d4d
+	+r($t)
+		font-size 16px
+		width auto
+	+r($t-s)
+		text-align center
+	&__phone,
+	&__email
+		margin-bottom 7px
+		display block
+		color #4d4d4d
+		line-height 1
+		text-decoration none
+
+.nav
+	+r($t)
+		position relative
+		min-height 50px
+	&__trigger
+		position relative
+		top 8px
+		display none
+		float right
+		sprite($menu_button)
+		hide-text()
+		+r($t)
+			display block
+			font-size 18px
+	&__check
+		display none
+		+r($t)
+			&:checked ~
+				.nav__list
+					position absolute
+					z-index 10
+					display block
+					top 100%
+					right -21px
+					min-width 280px
+					min-height 100vh
+					background #ffffff
+					text-align right
+					text-align-last right
+					&:after
+						display none
+					li
+						a
+							position relative
+							display inline-block
+							font-size 19px
+							color #4361b4
+							&:hover
+								color #85b443
+						&:last-child
+							a
+								padding-right 16px
+					.submenu
+						position relative
+						padding 16px
+						min-width 100%
+					.nav__item_submenu
+						.nav__link
+							&:after
+								position absolute
+								top 50%
+								left -22px
+								margin-top -13px
+								content ""
+								sprite($submenu_icon)
+
+					.submenu__title
+						margin-bottom 25px
+					.submenu__item
+						margin-bottom 15px
+						&:last-child
+							a
+								padding 0
+
+
+
+	&__list
+		font-size 0
+		+r($t)
+			display none
+
+	&__item,
+	li
+		display inline-block
+		vertical-align top
+		+r($t)
+			display block
+
+		&:first-child
+			a
+				padding-left 0
+		&:last-child
+			a
+				padding-right 0
+	&__link,
+	a
+		padding-top 16px
+		padding-right 26px
+		padding-bottom 14px
+		padding-left 26px
+		display block
+		font-size 17px
+		color #FFF
+		text-decoration none
+		+r($d)
+			padding-top 26px
+			padding-right 16px
+			padding-bottom 24px
+			padding-left 16px
+		&:hover
+			color #85b443
+	.current-menu-item
+		a
+			color #85b443
+	&__item
+		position relative
+		// .submenu
+		// 	& ~ .nav__link
+		// 			background #f0f0f1
+		// 			color #4361b4
+	&__item_submenu
+		&:hover
+			background #f0f0f1
+			color #4361b4
+			a
+				color #4361b4
+			.submenu
+				display block
+
+.nav_sticky
+	display inline-block
+
+
+.submenu
+	position absolute
+	z-index 1
+	top 100%
+	left 0
+	padding-top 30px
+	padding-left 30px
+	padding-right 30px
+	display none
+	min-width 360px
+	background #F0F0F1
+	border 1px solid #E6E6E7
+	border-width 0 1px 1px
+	&__menu
+		margin-bottom 30px
+	&__title
+		margin-bottom 10px
+		font-size 23px
+		a.submenu__link
+			padding 0
+			font-size 23px
+			color #4d4d4d
+	&__item,
+	li
+		margin-bottom 5px
+		padding 0
+		display block
+		a.submenu__link
+			padding 0
+			font-size 17px
+			color #4d4d4d
+
+	&__link
+		padding 0
+		color #4d4d4d
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&__link_active
+		sprite($submenu_icon_active)
+// .nav_second
+// 	.nav__item
+// 		a
+// 			padding-left 24px
+
+
+.header__hide
+	display none

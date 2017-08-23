@@ -1,2 +1,50 @@
 .footer
 	display block
+	background #4161B5
+	&__in
+		@extends .in-second
+		padding-top 16px
+		padding-bottom 16px
+		min-height 140px
+	&__row
+		clearfix()
+	&__logo,
+	&__nav,
+	&__form
+		display inline-block
+		vertical-align top
+	&__logo
+		margin-top 26px
+	&__nav
+		margin-top 30px
+		margin-left 57px
+		+r($d)
+			margin-left 30px
+		+r($t)
+			margin-top 14px
+			.nav__list
+				display block
+			.nav__item
+				display inline-block
+				width 33%
+				a
+					padding-top 7px
+					padding-left 0
+					padding-bottom 7px
+					padding-right 0
+		+r($t-s)
+			margin-left 0
+	&__form
+		margin-left 50px
+		+r($d-l)
+			display none
+		// float right
+	&__copyright
+		margin-top -10px
+		margin-left -8px
+		margin-bottom 0
+		font-size 17px
+		color #f7f7f8
+		+r($d-l)
+			margin-top 10px
+			margin-left 0

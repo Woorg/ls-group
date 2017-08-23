@@ -1,2 +1,66 @@
 .advantages
 	display block
+	overflow hidden
+	&__in
+		@extends .in
+		padding-top 14px
+		padding-bottom 14px
+		overflow hidden
+	&__title
+		@extends .title
+		margin-bottom 10px
+	&__list
+		font-size 0
+		text-align center
+	&__item
+		// margin-right 28px
+		margin-right ratio-percentage(30, $d-l)
+		padding-top 50px
+		padding-right 25px
+		padding-bottom 32px
+		padding-left 25px
+		width 415px
+		width ratio-percentage(415, $d-l)
+		min-height 320px
+		display inline-block
+		vertical-align top
+		background url(../images/general/pattern.jpg) 0 0 repeat
+		text-align center
+		&:last-child
+			margin-right 0
+		+r($d)
+			margin-right 0
+			margin-bottom 16px
+			width 100%
+	&__icon
+		position relative
+		margin-bottom 38px
+		min-height 68px
+		&:after
+			position absolute
+			top 50%
+			left 50%
+			content ""
+			transform translate(-50%, -50%)
+	&__item-title
+		margin-bottom 20px
+		font-size 23px
+		color #4d4d4d
+	&__text
+		padding-left 10px
+		padding-right 10px
+		font-size 17px
+		color #4d4d4d
+
+	.advantages__item_quality
+		.advantages__icon
+			&:after
+				sprite($advant_1)
+	.advantages__item_equip
+		.advantages__icon
+			&:after
+				sprite($advant_2)
+	.advantages__item_price
+		.advantages__icon
+			&:after
+				sprite($advant_3)

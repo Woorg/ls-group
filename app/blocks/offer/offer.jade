@@ -1,3 +1,35 @@
 mixin offer()
-	+b.offer&attributes(attributes)
-		block
+	section.offer
+		.offer__in
+			h2.offer__title Мы предлагаем
+			ul.offer__list
+				li.offer__item
+					a.offer__link(href="#offer")
+						.offer__image
+							img(src="assets/images/content/offer-1.jpg", alt="")
+						.offer__item-title Организациям
+						ol.offer__feature
+							li.offer__feature-item Лизинг
+							li.offer__feature-item Рассрочка платежа
+							li.offer__feature-item Обслуживание: пострагантийное и гарантийное
+
+				li.offer__item
+					a.offer__link(href="#offer")
+						.offer__image
+							img(src="assets/images/content/offer-2.jpg", alt="")
+						.offer__item-title Частным клиентам
+						ol.offer__feature
+							li.offer__feature-item Лизинг
+							li.offer__feature-item Рассрочка платежа
+							li.offer__feature-item Обслуживание: пострагантийное и гарантийное
+							li.offer__feature-item Бонусы
+
+
+				li.offer__item.offer__item_questions
+					a.offer__link(href="#offer")
+						.offer__item-title Остались вопросы?
+						.offer__text Позвоните нам по номеру 8-800-800-80-80 или оставьте свои контакты, и мы свяжемся с вами в течение 15 минут!
+						.offer__form.form
+							form(action="/", method="post")
+								input.form__field.form__field_phone(type="text", placeholder="8-___-___-__-__", value="")
+								input.form__field.form__field_submit(type="submit", value="Заказать звонок")
