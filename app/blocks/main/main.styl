@@ -1,6 +1,8 @@
 .main
+	clearfix()
 	&__text
 		background url(../images/general/pattern.jpg) 0 0 repeat
+		clear both
 	&__w
 		@extends .in
 		padding-top 26px
@@ -10,3 +12,13 @@
 		margin-bottom 5px
 	&__wysiwyg
 		@extends .wysiwyg
+
+
+.page_inner
+	.main
+		clearfix()
+	.main__w
+		@extends .in
+		clearfix()
+	.main__text
+		background none

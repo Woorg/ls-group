@@ -1,0 +1,26 @@
+extends /blocks/layout-default/layout-inner
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/main/main
+include /blocks/sidebar/sidebar
+include /blocks/content/content
+include /blocks/articles/articles
+include /blocks/pagination/pagination
+
+
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'ls group - articles';
+
+block content
+	+header()
+	+main()
+		+breadcrumbs-catalog()
+		.main__w
+			+articles()
+			+pagination()
+		.page__buffer
+
+	+footer()

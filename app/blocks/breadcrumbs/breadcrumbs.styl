@@ -1,0 +1,32 @@
+.breadcrumbs
+	background url(../images/general/pattern.jpg) 0 0 repeat
+	&__in
+		@extends .in
+		padding-top 19px
+		padding-bottom 15px
+	&__list
+		font-size 0
+	&__item
+		margin-right 10px
+		display inline-block
+		vertical-align top
+		font-size 19px
+		line-height 1.2
+	&__link
+		position relative
+		padding-right 10px
+		color #4d4d4d
+		text-decoration none
+		&:hover
+			text-decoration underline
+		&:after
+			position absolute
+			top 0
+			right -5px
+			content ">"
+			font-size 19px
+	&__item
+		&:last-child
+			a
+				&:after
+					display none

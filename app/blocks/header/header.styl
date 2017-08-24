@@ -12,45 +12,7 @@
 		.header__in
 			padding-top 0
 			padding-bottom 0
-	&__row_sticky
-		position fixed
-		z-index 10
-		top 0
-		left 0
-		right 0
-		background #4a65ac url(../images/general/menu.jpg) 0 0 repeat-x
-		+r($d)
-			background #FFF
-		.header__in
-			padding-top 0
-			padding-bottom 0
-		.logo
-			margin-top 12px
-			sprite($logo_sticky)
-		.nav
-			margin-left 40px
-			clearfix()
 
-		.nav__list
-			&:after
-				display none
-			a
-				padding-top 13px
-			// 	padding-bottom 16px
-
-		.header__button
-			@extends .button-small
-			margin-left 22px
-			margin-top 10px
-			height 34px
-			+r($d)
-				display none
-		.header__contacts
-			margin-top 6px
-			margin-left 12px
-			a
-				font-size 17px
-				color #FFF
 
 	&__logo,
 	&__slogan,
@@ -139,14 +101,126 @@
 .nav
 	+r($t)
 		position relative
-		min-height 50px
+		min-height 48px
+
+
+
+
+	&__list
+		font-size 0
+		+r($t)
+			display none
+
+	&__item,
+	li
+		display inline-block
+		vertical-align top
+		+r($t)
+			display block
+
+		&:first-child
+			a
+				padding-left 0
+		&:last-child
+			a
+				padding-right 0
+	&__link,
+	a
+		padding-top 14px
+		padding-right 26px
+		padding-bottom 14px
+		padding-left 26px
+		display block
+		font-size 17px
+		color #FFF
+		text-decoration none
+		// +r($d)
+		// 	padding-top 26px
+		// 	padding-right 16px
+		// 	padding-bottom 24px
+		// 	padding-left 16px
+		&:hover
+			color #85b443
+	.current-menu-item
+		a
+			color #85b443
+	&__item
+		position relative
+		// .submenu
+		// 	& ~ .nav__link
+		// 			background #f0f0f1
+		// 			color #4361b4
+	&__item_submenu
+		&:hover
+			background #f0f0f1
+			color #4361b4
+			a
+				color #4361b4
+			.submenu
+				display block
+
+// .nav_sticky
+// 	display inline-block
+// 	+r($t-s)
+// 		float right
+
+.submenu
+	position absolute
+	z-index 1
+	top 100%
+	left 0
+	padding-top 30px
+	padding-left 30px
+	padding-bottom 30px
+	padding-right 30px
+	display none
+	min-width 360px
+	background #F0F0F1
+	border 1px solid #E6E6E7
+	border-width 0 1px 1px
+	&__menu
+		margin-bottom 30px
+		+r($t)
+			margin-bottom 10px
+	&__title
+		margin-bottom 10px
+		font-size 23px
+		a.submenu__link
+			padding 0
+			font-size 23px
+			color #4d4d4d
+	&__item,
+	li
+		margin-bottom 5px
+		padding 0
+		display block
+		a.submenu__link
+			padding 0
+			font-size 17px
+			color #4d4d4d
+
+	&__link
+		padding 0
+		color #4d4d4d
+		text-decoration none
+		&:hover
+			text-decoration underline
+	&__link_active
+		sprite($submenu_icon_active)
+// .nav_second
+// 	.nav__item
+// 		a
+// 			padding-left 24px
+
+.nav
 	&__trigger
 		position relative
-		top 8px
+		top 7px
 		display none
 		float right
 		sprite($menu_button)
 		hide-text()
+		cursor pointer
 		+r($t)
 			display block
 			font-size 18px
@@ -191,6 +265,9 @@
 								margin-top -13px
 								content ""
 								sprite($submenu_icon)
+							&:hover
+								&:after
+									sprite($submenu_icon_active)
 
 					.submenu__title
 						margin-bottom 25px
@@ -201,109 +278,63 @@
 								padding 0
 
 
-
-	&__list
-		font-size 0
-		+r($t)
-			display none
-
-	&__item,
-	li
-		display inline-block
-		vertical-align top
-		+r($t)
-			display block
-
-		&:first-child
-			a
-				padding-left 0
-		&:last-child
-			a
-				padding-right 0
-	&__link,
-	a
-		padding-top 16px
-		padding-right 26px
-		padding-bottom 14px
-		padding-left 26px
-		display block
-		font-size 17px
-		color #FFF
-		text-decoration none
-		+r($d)
-			padding-top 26px
-			padding-right 16px
-			padding-bottom 24px
-			padding-left 16px
-		&:hover
-			color #85b443
-	.current-menu-item
-		a
-			color #85b443
-	&__item
-		position relative
-		// .submenu
-		// 	& ~ .nav__link
-		// 			background #f0f0f1
-		// 			color #4361b4
-	&__item_submenu
-		&:hover
-			background #f0f0f1
-			color #4361b4
-			a
-				color #4361b4
-			.submenu
-				display block
-
-.nav_sticky
-	display inline-block
-
-
-.submenu
-	position absolute
-	z-index 1
-	top 100%
-	left 0
-	padding-top 30px
-	padding-left 30px
-	padding-right 30px
-	display none
-	min-width 360px
-	background #F0F0F1
-	border 1px solid #E6E6E7
-	border-width 0 1px 1px
-	&__menu
-		margin-bottom 30px
-	&__title
-		margin-bottom 10px
-		font-size 23px
-		a.submenu__link
-			padding 0
-			font-size 23px
-			color #4d4d4d
-	&__item,
-	li
-		margin-bottom 5px
-		padding 0
-		display block
-		a.submenu__link
-			padding 0
-			font-size 17px
-			color #4d4d4d
-
-	&__link
-		padding 0
-		color #4d4d4d
-		text-decoration none
-		&:hover
-			text-decoration underline
-	&__link_active
-		sprite($submenu_icon_active)
-// .nav_second
-// 	.nav__item
-// 		a
-// 			padding-left 24px
-
-
 .header__hide
 	display none
+
+.header
+	&__row_sticky
+		position fixed
+		z-index 10
+		top 0
+		left 0
+		right 0
+		background #4a65ac url(../images/general/menu.jpg) 0 0 repeat-x
+		// height 50px
+		.header__in
+			padding-top 0
+			padding-bottom 0
+			white-space nowrap
+			clearfix()
+		.logo
+			margin-top 8px
+			sprite($logo_sticky)
+			float left
+		.nav
+			margin-top 2px
+			margin-left 20px
+			margin-bottom 1px
+			float left
+			clearfix()
+
+			+r($t)
+				float right
+
+		.nav__trigger
+			margin-top -2px
+		.nav__list
+			&:after
+				display none
+			// a
+			// 	padding-top 17px
+			// 	padding-left 16px
+			// 	padding-right 16px
+			// 	padding-bottom 17px
+		.nav__link
+			+r($d)
+				padding-left 16px
+				padding-right 16px
+		.header__button
+			@extends .button-small
+			margin-left 22px
+			margin-top 10px
+			height 34px
+			+r($d-l)
+				display none
+		.header__contacts
+			margin-top 4px
+			margin-left 12px
+			margin-right -10px
+			a
+				margin-bottom 5px
+				font-size 17px
+				color #FFF

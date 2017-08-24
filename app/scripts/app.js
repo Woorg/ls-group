@@ -19,9 +19,9 @@ import 'jquery-mask-plugin';
 
 		$(window).scroll( function () {
 
-			if( $(window).width() > 768 ) {
+			// if( $(window).width() > 768 ) {
 
-				if( $(window).scrollTop() > $advantagesHeight ) {
+				if( $(window).scrollTop() > 180 ) {
 					$stickyRow.addClass('header__row_sticky');
 					$headerSlogan.addClass('header__hide');
 					$navSticky.removeClass('header__hide');
@@ -34,7 +34,7 @@ import 'jquery-mask-plugin';
 
 				}
 
-			}
+			// }
 
 		});
 

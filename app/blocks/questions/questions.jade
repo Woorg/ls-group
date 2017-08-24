@@ -1,0 +1,9 @@
+mixin questions()
+	.questions
+		h2.questions__title Остались вопросы? Позвоните нам по номеру 8-800-800-80-80
+		p.questions__text или оставьте свои контакты, и наши специалисты свяжутся с вами в течение 15 минут
+		.questions__form.form
+			form(action="", method="post")
+				input.form__field.form__field_phone(type="text", placeholder="8-___-___-__-__", value="")
+				input.form__field.form__field_submit(type="submit", value="Заказать звонок")
+

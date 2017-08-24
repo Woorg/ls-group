@@ -1,0 +1,61 @@
+.catalog
+	// border 1px solid #eeeeef
+	&__list
+		padding 15px
+	&__item
+		position relative
+		margin-bottom 15px
+		border 1px solid #eaeaeb
+		padding 13px
+	&__link
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		hide-text()
+	&__body
+		font-size 0
+		clearfix()
+	&__image,
+	&__item-w
+		float left
+	&__image
+		position relative
+		border 10px solid #f0f0f1
+		width 210px
+		height 152px
+		background #FFF
+		overflow hidden
+		img
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			max-width 90%
+			height auto
+	&__item-w
+		padding-left 25px
+		width 500px
+		color #4d4d4d
+	&__title
+		margin-bottom 17px
+		font-size 23px
+		line-height 1.2
+	&__specs
+		font-size 17px
+	&__specs-item
+		margin-bottom 5px
+	// &__bottom
+	// 	margin-bottom 20px
+	&__button
+		@extends .button
+		width 210px
+	&__price
+		display inline-block
+		margin-left 22px
+		font-family $cB
+		font-size 23px
+		line-height 46px
+		color #4d4d4d
+

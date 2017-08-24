@@ -1,0 +1,52 @@
+.articles
+	&__title
+		margin-bottom 10px
+		@extends .title
+	// &__list
+
+	&__item
+		border 1px solid #E6E6E6
+		margin-bottom 25px
+		background #FFF
+	&__link
+		display block
+		font-size 0
+		color #4d4d4d
+	&__image
+		position relative
+		padding 20px
+		width 410px
+		height 300px
+		background #F0F0F1
+		img
+			max-width 100%
+			height auto
+	&__image,
+	&__item-w
+		display inline-block
+		vertical-align top
+	&__item-w
+		padding 20px
+		width 820px
+	&__item-title
+		font-size 23px
+		margin-bottom 15px
+	&__date
+		position relative
+		margin-bottom 15px
+		padding-left 24px
+		font-family $ci
+		font-size 17px
+		&:after
+			position absolute
+			top 0
+			left 0
+			// margin-top -9px
+			sprite($date_icon)
+			content ""
+	&__text
+		margin-bottom 20px
+		font-size 17px
+	&__more
+		@extends .button
+		cursor pointer

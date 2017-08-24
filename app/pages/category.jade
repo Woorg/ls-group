@@ -1,0 +1,29 @@
+extends /blocks/layout-default/layout-inner
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/main/main
+include /blocks/sidebar/sidebar
+include /blocks/content/content
+include /blocks/catalog/catalog
+
+
+
+
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'ls group - catalog';
+
+block content
+	+header()
+	+main()
+		+breadcrumbs-catalog()
+		.main__w
+			+sidebar-category()
+			+content()
+				+catalog()
+
+		.page__buffer
+
+	+footer()
