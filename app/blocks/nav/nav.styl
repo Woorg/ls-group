@@ -4,7 +4,6 @@
 		min-height 48px
 	&__list
 		font-size 0
-		display flex
 		+r($t)
 			display none
 
@@ -23,9 +22,9 @@
 				padding-right 0
 	&__link,
 	a
-		padding-top 19px
+		padding-top 14px
 		padding-right 26px
-		padding-bottom 13px
+		padding-bottom 15px
 		padding-left 26px
 		display block
 		font-size 17px
@@ -34,6 +33,9 @@
 		white-space nowrap
 		&:hover
 			color #85b443
+		+r($d)
+			padding-left 16px
+			padding-right 16px
 	.current-menu-item
 		a
 			color #85b443
@@ -83,6 +85,7 @@
 					li
 						a
 							position relative
+							padding-right 16px
 							display inline-block
 							font-size 19px
 							color #4361b4
@@ -94,13 +97,14 @@
 					.submenu
 						position relative
 						padding 16px
+						padding 0
 						min-width 100%
 					.nav__item_submenu
 						.nav__link
 							&:after
 								position absolute
 								top 50%
-								left -22px
+								left -26px
 								margin-top -13px
 								content ""
 								sprite($submenu_icon)
@@ -114,7 +118,7 @@
 						margin-bottom 15px
 						&:last-child
 							a
-								padding 0
+								padding 0 16px 0 0
 
 .submenu
 	position absolute

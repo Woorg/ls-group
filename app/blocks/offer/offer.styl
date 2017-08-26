@@ -4,10 +4,11 @@
 	&__in
 		@extends .in
 		padding-top 10px
-		padding-bottom 50px
+		padding-bottom 20px
 	&__title
 		@extends .title
 		margin-bottom 20px
+		padding-left 20px
 	&__list
 		font-size 0
 		text-align center
@@ -19,7 +20,7 @@
 		margin-right ratio-percentage(18, $d-l)
 		margin-bottom 18px
 		width 415px
-		width ratio-percentage(415,$d-l)
+		width ratio-percentage(427,$d-l)
 		min-height 344px
 		display inline-block
 		vertical-align top
@@ -27,8 +28,13 @@
 		text-align left
 		&:last-child
 			margin-right 0
+		+r($d-l)
+			width ratio-percentage(415,$d-l)
 		+r($d)
-			width 48.5%
+			margin-right ratio-percentage(26, $d-l)
+			width 48%
+			&:nth-child(2n)
+				margin-right 0
 		+r($t)
 			margin-right 0
 			width 100%

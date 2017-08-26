@@ -10,6 +10,8 @@ include /blocks/pagination/pagination
 
 
 include /blocks/footer/footer
+include /blocks/popup/popup
+include /blocks/form/form
 
 block head
 	- var pageTitle = 'ls group - articles';
@@ -24,3 +26,5 @@ block content
 		.page__buffer
 
 	+footer()
+	+popup().mfp-hide#popup
+		+form()

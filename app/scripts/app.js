@@ -125,6 +125,13 @@ import 'magnific-popup';
 		});
 
 
+		// Popup
+
+		$('.header__button').magnificPopup({
+			type: 'inline',
+			midClick: true,
+			closeBtnInside: true
+		});
 	});
 
 

@@ -8,6 +8,10 @@ include /blocks/sidebar/sidebar
 include /blocks/content/content
 
 include /blocks/footer/footer
+include /blocks/popup/popup
+include /blocks/form/form
+
+
 
 block head
 	- var pageTitle = 'ls-group - product';
@@ -23,3 +27,6 @@ block content
 				+product()
 		.page__buffer
 	+footer()
+	+popup().mfp-hide#popup
+		+form()
+

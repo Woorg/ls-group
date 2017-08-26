@@ -16,7 +16,8 @@
 		position relative
 		padding 20px
 		width 410px
-		height 300px
+		width ratio-percentage(410, $d-l)
+		min-height 300px
 		background #F0F0F1
 		img
 			max-width 100%
@@ -25,9 +26,15 @@
 	&__item-w
 		display inline-block
 		vertical-align top
+	&__image
+		+r($t)
+			display none
 	&__item-w
 		padding 20px
 		width 820px
+		width ratio-percentage(910, $d-l)
+		+r($t)
+			width auto
 	&__item-title
 		font-size 23px
 		margin-bottom 15px
