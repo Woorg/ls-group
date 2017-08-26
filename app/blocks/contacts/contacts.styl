@@ -1,0 +1,59 @@
+.contacts-b
+	position relative
+	padding-bottom 100px
+	padding-right 400px
+	+r($t)
+		padding-right 0
+		padding-bottom 0
+
+	&__title
+		margin-bottom 16px
+		@extends .title
+		// padding-left 0
+	&__block
+		margin-bottom 30px
+		margin-left 8px
+
+	&__block-title
+		margin-bottom 15px
+		font-size 23px
+	// &__list
+
+	&__item
+		position relative
+		margin-bottom 10px
+		padding-left 32px
+		font-size 17px
+		text-align left
+		a
+			font-size 17px
+			color inherit
+			text-decoration none
+		&:after
+			position absolute
+			top 50%
+			left 0
+			content ""
+	&__item_1
+		&:after
+			margin-top -8px
+			sprite($phone_icon)
+	&__item_2
+		&:after
+			margin-top -6px
+			sprite($mail_icon)
+	&__item_3
+		&:after
+			margin-top -8px
+			sprite($marker_icon)
+	&__list_second
+		.contacts-b__item
+			padding 0
+	&__form
+		position absolute
+		top 6px
+		right 26px
+		+r($d)
+			right 0
+		+r($t)
+			display none

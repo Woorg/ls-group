@@ -3,22 +3,26 @@
 	&__text
 		background url(../images/general/pattern.jpg) 0 0 repeat
 		clear both
+		@extends .wysiwyg
 	&__w
+		position relative
 		@extends .in
-		padding-top 26px
+		padding-top 7px
 		padding-bottom 30px
+		clearfix()
 	&__title
 		@extends .title
 		margin-bottom 5px
-	&__wysiwyg
-		@extends .wysiwyg
 
 
 .page_inner
 	.main
 		clearfix()
 	.main__w
+		position relative
 		@extends .in
 		clearfix()
+	.main__title
+		@extends .title
 	.main__text
 		background none

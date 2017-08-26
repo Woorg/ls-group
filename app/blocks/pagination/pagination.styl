@@ -4,6 +4,8 @@
 	padding-bottom 50px
 	display block
 	font-family $pS
+	+r($t)
+		padding-left 0
 	&__list
 		font-size 0
 		text-align center
@@ -13,6 +15,8 @@
 		vertical-align top
 		&:first-child
 			margin-left 0
+		+r($t)
+			margin-bottom 8px
 	&__link
 		padding 15px 12px
 		width 50px
@@ -24,6 +28,13 @@
 		text-align center
 		text-decoration none
 		tr(background .3s ease)
+		+r($t)
+			font-size 26px
+		+r($t-s)
+			padding 10px 6px
+			width auto
+			height auto
+			font-size 21px
 	&__link
 		&:hover
 			background #4361B4

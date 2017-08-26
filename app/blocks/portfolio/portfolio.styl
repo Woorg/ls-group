@@ -1,0 +1,112 @@
+.portfolio
+	&__title
+		margin-bottom 10px
+		@extends .title
+	&__filter
+		margin-bottom 20px
+		font-size 0
+		white-space nowrap
+		+r($t-s)
+			white-space normal
+	&__filter-item
+		margin-left 18px
+		display inline-block
+		vertical-align top
+		&:first-child
+			margin-left 0
+		+r($d-l)
+			margin-right ratio-percentage(18, $d-l)
+			width ratio-percentage(416, $d-l)
+
+		+r($t)
+			margin-right 1%
+			width 48%
+		+r($t-s)
+			margin-left 0
+			margin-bottom 10px
+			margin-right 0
+			width 100%
+
+
+	&__filter-item_active
+		.portfolio__link
+			background #86b541
+			&:hover
+				background darken(#86b541, 10)
+	&__link
+		@extends .button-big
+		padding-top 13px
+		padding-bottom 13px
+		display block
+		width 416px
+		background #4161b5
+		&:hover
+			background darken(#4161b5, 10)
+		+r($d-l)
+			width 100%
+		+r($d)
+			font-size 19px
+		+r($t-s)
+			font-size 17px
+		+r($t-s)
+			font-size 13px
+
+	&__gall-w
+		overflow hidden
+	&__gall
+		margin-right -24px
+		+r($t-s)
+			margin-right 0
+	&__gall-item
+		margin-right 18px
+		margin-bottom 18px
+		width 414px
+		display inline-block
+		vertical-align top
+		+r($d-l)
+			margin-right ratio-percentage(18, $d-l)
+			width ratio-percentage(414, $d-l)
+		+r($t)
+			margin-right 1%
+			width 48%
+		+r($t-s)
+			margin-right 0
+			width auto
+
+	&__gall-link
+		display block
+		&:hover
+			.portfolio__caption
+				opacity 1
+				visibility visible
+				transform translateY(0)
+
+	&__image
+		position relative
+		padding 20px
+		background #f0f0f1
+		img
+			max-width 100%
+			height auto
+
+	&__caption
+		position absolute
+		right 20px
+		left 20px
+		bottom 20px
+		padding 30px 20px
+		background #4161b5
+		font-size 17px
+		color #fff
+		visibility hidden
+		opacity 0
+		transform translateY(100%)
+		tr(opacity .3s ease)
+		+r($d)
+			top 20px
+	&__pagination
+		text-align center
+	&__more
+		@extends .button
+		width 222px
+

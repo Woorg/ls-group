@@ -19,3 +19,78 @@
 	&__field_submit
 		@extends .button
 		margin-bottom 0
+
+.ui-state-error
+	border 1px solid red
+
+.form_callback
+	padding 37px
+	width 397px
+	height 420px
+	background url(../images/general/pattern.jpg) 0 0 repeat
+	.form__title
+		margin-bottom 27px
+		font-size 23px
+		text-align center
+	.form__field
+		margin 0
+		margin-bottom 10px
+		padding-top 18px
+		padding-bottom 17px
+		width 100%
+		font-family $cR
+		font-size 17px
+		color #85b443
+		text-align center
+		border-radius 5px
+		border 1px solid #E6E6E6
+		+placeholder()
+			color #85b443
+	.form__field_textarea
+		padding-top 30px
+		min-height 80px
+	.form__field_submit
+		@extends .button
+		color #FFF
+		border-radius 25px
+	.form__privacy
+		display block
+		cursor pointer
+	.form__checkbox
+		position relative
+		// display none
+		float left
+		width 20px
+		height 20px
+		text-align left
+		&:before
+			position absolute
+			top 0
+			left 0
+			width 19px
+			height 19px
+			background #fff
+			border 1px solid #e5e5e5
+			content ""
+		&:checked
+			&:after
+				position absolute
+				top 0
+				left 0
+				sprite($checked)
+				content ""
+
+		&.ui-state-error
+			&:before
+				border 1px solid red
+	.form__privacy-text
+		margin-left 20px
+		display inline-block
+
+		width 273px
+		font-size 15px
+		color #4d4d4d
+		text-align left
+
+	.ui-state-error
+		border 1px solid red

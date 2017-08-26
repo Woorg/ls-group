@@ -1,5 +1,23 @@
 .content
-	padding-top 40px
+	// padding-top 40px
 	width 850px
-	width ratio-percentage(850, $d-l)
+	width ratio-percentage(896, $d-l)
 	float left
+	+r($t)
+		width ratio-percentage(650, $t)
+	+r($t-s)
+		width ratio-percentage(610, $t)
+
+	+r($m-l)
+		width ratio-percentage(580, $t)
+
+		// width auto
+		// float none
+
+
+.content_open
+	float right
+	width ratio-percentage(896, $d-l)
+	+r($t-s)
+		width auto
+		float none

@@ -118,19 +118,16 @@ gh($color1, $color2)
 //+font(black, cytiapro-black-webfont)
 
 
-// ROTATE
-rotate($deg = 0, $m11 = 0, $m12 = 0, $m21 = 0, $m22 = 0)
-	transform: rotate($deg + deg)
 
 //TRANSITION
 
 tr($what)
-	transition: $what
+	transition $what
 
 hide-text()
-	font: 0 / 0 a
-	text-shadow: none
-	color: transparent
+	font 0 / 0 a
+	text-shadow none
+	color transparent
 
 hidetext()
 	hide-text()
@@ -138,36 +135,36 @@ hidetext()
 // IMPORTANT!!!! REQUIRES SPACES BETWEEN ELEMENTS, NO SUCH STUFF: </li><li>
 
 justify()
-	text-align: justify
-	line-height: 0
-	font-size: 0
-	text-justify: newspaper
-	zoom: 1
-	text-align-last: justify
+	text-align justify
+	line-height 0
+	font-size 0
+	text-justify newspaper
+	zoom 1
+	text-align-last justify
 	&:after
-		content: ""
-		display: inline-block
-		width: 100%
-		height: 0px
-		visibility: hidden
-		overflow: hidden
+		content ""
+		display inline-block
+		width 100%
+		height 0px
+		visibility hidden
+		overflow hidden
 
 vertical()
-	text-align: center
-	font-size: 0
+	text-align center
+	font-size 0
 	&:before
-		content: ""
-		display: inline-block
-		vertical-align: middle
-		width: 0
-		height: 100%
+		content ""
+		display inline-block
+		vertical-align middle
+		width 0
+		height 100%
 
 clr()
 	&:after
-		content: " "
-		display: table
-		clear: both
-		*zoom: 1
+		content " "
+		display table
+		clear both
+		*zoom 1
 
 placeholder-color($color)
 	&::placeholder
@@ -258,8 +255,6 @@ arr($width, $height, $bg, $direction)
 // example
 // +arr(500,50, #000, l)
 // +arr(500,50, #000, bl)
-rotate($var)
-	transform: rotate($var + deg)
 
 blur($var)
 	filter: blur($var)

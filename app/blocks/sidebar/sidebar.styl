@@ -2,25 +2,35 @@
 	padding-top 10px
 	width 416px
 	width ratio-percentage(416, $d-l)
+	min-height 100vh
 	float left
+	+r($t)
+		width 68px
+
 	&__title
 		margin-bottom 10px
 		@extends .title
+		+r($t)
+			display none
 	&__w
-		padding-top 30px
-		padding-left 20px
-		padding-right 20px
+		position relative
+		padding-top 18px
+		padding-left 10px
+		padding-right 10px
 		padding-bottom 30px
+		min-height 100vh
 		background url(../images/general/pattern.jpg) 0 0 repeat
+		overflow hidden
 	&__nav
 		margin-bottom 30px
-
+		+r($t)
+			display none
 	&__nav-item
 		margin-bottom 30px
 		font-size 23px
 		font-weight 400
 	&__nav-link
-		margin-bottom 15px
+		margin-bottom 13px
 		display block
 		color #4d4d4d
 		text-decoration none
@@ -38,3 +48,69 @@
 			text-decoration underline
 
 
+	&__trigger
+		position absolute
+		top 18px
+		left 0
+		right 0
+		bottom 0
+		display none
+		cursor pointer
+		+r($t)
+			display block
+	&__trigger-button
+		margin 10px auto 0
+		width 54px
+		height 36px
+		background url(../images/general/menu-button-active.svg) 0 0 no-repeat
+	&__trigger-text
+		margin-top 120px
+		font-size 19px
+		line-height 68px
+		white-space nowrap
+		transform rotate(-90deg)
+
+
+
+.sidebar_open
+	position absolute
+	z-index 10
+	top 52px
+	left 20px
+	padding-top 10px
+	width 416px
+	// width ratio-percentage(416, $d-l)
+	+r($t-s)
+		width 80%
+	.sidebar__w
+		padding-top 25px
+		padding-left 6px
+	.sidebar__trigger
+		position static
+		margin-bottom 20px
+		line-height 1
+	.sidebar__trigger-button,
+	.sidebar__trigger-text
+		display inline-block
+		vertical-align top
+	.sidebar__trigger-button
+		margin 0 0 10px
+		background url('../images/general/sidebar-button.svg') 0 0 no-repeat
+	.sidebar__trigger-text
+		margin-top -7px
+		padding-left 5px
+		width 68%
+		white-space normal
+		color #4a65ac
+		font-size 17px
+		line-height 1.2
+		transform rotate(0)
+		+r($t)
+			padding-left 0
+		+r($t-s)
+			padding-left 0
+	.sidebar__title
+		display block
+
+	.sidebar__nav
+		display block

@@ -1,7 +1,10 @@
 mixin sidebar()
 	.sidebar
-		h2.sidebar__title Каталог
 		.sidebar__w
+			.sidebar__trigger
+				.sidebar__trigger-button
+				.sidebar__trigger-text Развернуть категории
+			//- input.sidebar__nav-check#sidebar-nav-trigger(type="checkbox")
 			ul.sidebar__nav
 				li.sidebar__nav-item
 					a.sidebar__nav-link(href="#link") Фрезерные станки с ЧПУ
@@ -29,8 +32,11 @@ mixin sidebar()
 
 mixin sidebar-category()
 	.sidebar
-		h2.sidebar__title Категория / подкатегория
 		.sidebar__w
+			.sidebar__trigger
+				.sidebar__trigger-button
+				.sidebar__trigger-text Развернуть категории
+
 			ul.sidebar__nav
 				li.sidebar__nav-item
 					a.sidebar__nav-link(href="#link") Фрезерные станки с ЧПУ

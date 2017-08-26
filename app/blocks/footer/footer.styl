@@ -18,27 +18,38 @@
 	&__nav
 		margin-top 30px
 		margin-left 57px
+		// width 80%
 		+r($d)
+			margin-top 15px
 			margin-left 30px
+			float right
+			width 80%
 		+r($t)
-			margin-top 14px
-			.nav__list
-				display block
-			.nav__item
-				display inline-block
-				width 33%
-				a
-					padding-top 7px
-					padding-left 0
-					padding-bottom 7px
-					padding-right 0
+			width 68%
 		+r($t-s)
 			margin-left 0
+			width 66%
+		.nav__list
+			display block
+		.nav__item
+			display inline-block
+			+r($d)
+				width 33%
+			+r(480px)
+				width 48%
+			a
+				padding-top 12px
+				+r($d)
+					padding-left 0
+				// padding-left 0
+				// padding-bottom 7px
+				// padding-right 0
 	&__form
 		margin-left 50px
+		margin-right 20px
+		float right
 		+r($d-l)
 			display none
-		// float right
 	&__copyright
 		margin-top -10px
 		margin-left -8px

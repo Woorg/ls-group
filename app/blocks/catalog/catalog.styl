@@ -1,7 +1,12 @@
 .catalog
 	// border 1px solid #eeeeef
+	+r($d)
+		width 100%
 	&__list
-		padding 15px
+		padding 12px 15px 15px
+		+r($d)
+			padding-right 0
+			width 100%
 	&__item
 		position relative
 		margin-bottom 15px
@@ -9,6 +14,7 @@
 		padding 13px
 	&__link
 		position absolute
+		z-index 1
 		top 0
 		left 0
 		right 0
@@ -17,6 +23,8 @@
 	&__body
 		font-size 0
 		clearfix()
+		+r($t-s)
+			margin-bottom 10px
 	&__image,
 	&__item-w
 		float left
@@ -24,9 +32,14 @@
 		position relative
 		border 10px solid #f0f0f1
 		width 210px
+		width ratio-percentage(210, 850)
 		height 152px
 		background #FFF
 		overflow hidden
+		+r($d)
+			width 32%
+		+r($t-s)
+			display none
 		img
 			position absolute
 			top 50%
@@ -37,7 +50,13 @@
 	&__item-w
 		padding-left 25px
 		width 500px
+		width 74%
 		color #4d4d4d
+		+r($d)
+			width 68%
+		+r($t-s)
+			padding-left 0
+			width auto
 	&__title
 		margin-bottom 17px
 		font-size 23px
@@ -51,6 +70,13 @@
 	&__button
 		@extends .button
 		width 210px
+		width ratio-percentage(210, 850)
+		+r($d)
+			width 30%
+			padding-left 0
+			padding-right 0
+		+r($t-s)
+			width 100%
 	&__price
 		display inline-block
 		margin-left 22px
@@ -58,4 +84,8 @@
 		font-size 23px
 		line-height 46px
 		color #4d4d4d
+		+r($t-s)
+			margin-left 0
+			width 100%
+			text-align center
 

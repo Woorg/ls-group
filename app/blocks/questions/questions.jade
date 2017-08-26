@@ -4,6 +4,6 @@ mixin questions()
 		p.questions__text или оставьте свои контакты, и наши специалисты свяжутся с вами в течение 15 минут
 		.questions__form.form
 			form(action="", method="post")
-				input.form__field.form__field_phone(type="text", placeholder="8-___-___-__-__", value="")
+				input.form__field.form__field_phone(type="text", placeholder="8-___-___-__-__", value="" required)
 				input.form__field.form__field_submit(type="submit", value="Заказать звонок")
 

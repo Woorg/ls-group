@@ -1,0 +1,42 @@
+.faq
+	&__title
+		margin-bottom 15px
+		@extends .title
+		// padding-left 0
+	&__list
+		margin-left 8px
+
+	&__item
+		// margin-bottom 5px
+		margin-bottom 0
+		font-size 19px
+	&__link
+		color #4361b4
+		line-height 27px
+		text-decoration none
+		&:hover
+			color #85b443
+
+	&__text
+		display none
+		color #4d4d4d
+	&__close
+		margin-bottom 10px
+		padding-bottom 10px
+		display none
+		color #85b443
+		text-decoration underline
+		border-bottom 1px solid #D3D3D3
+		&:hover
+			text-decoration none
+	&__item_active
+		.faq__link
+			font-family $cB
+			color #4d4d4d
+			text-decoration none
+		.faq__text
+			margin-top 20px
+			margin-bottom 20px
+			display block
+		.faq__close
+			display block

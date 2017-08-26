@@ -1,0 +1,24 @@
+extends /blocks/layout-default/layout-contacts
+
+include /blocks/header/header
+include /blocks/breadcrumbs/breadcrumbs
+include /blocks/main/main
+include /blocks/contacts/contacts
+include /blocks/map/map
+
+
+include /blocks/footer/footer
+
+block head
+	- var pageTitle = 'ls group - contacts';
+
+block content
+	+header()
+	+main()
+		+breadcrumbs-catalog()
+		.main__w
+			+contacts()
+		+map()
+		.page__buffer
+
+	+footer()

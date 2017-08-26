@@ -1,0 +1,24 @@
+include ../form/form
+
+
+mixin contacts()
+	.contacts-b
+		h1.contacts-b__title Контакты
+
+		.contacts-b__block
+			h2.contacts-b__block-title Центральный офис
+			ul.contacts-b__list
+				li.contacts-b__item.contacts-b__item_1
+					a(href="tel:89092784589") +7 909 278 45 89
+				li.contacts-b__item.contacts-b__item_2
+					a(href="mailto:lebmaks05@mail.ru") lebmaks05@mail.ru
+				li.contacts-b__item.contacts-b__item_3 г. Ярославль, ул. Малая Пролетарская, 18б, офис 16
+
+		.contacts-b__block
+			h2.contacts-b__block-title Реквизиты
+			ul.contacts-b__list.contacts-b__list_second
+				li.contacts-b__item ООО «ЛС-Групп»
+				li.contacts-b__item ИНН: 7604326784
+				li.contacts-b__item КПП: 760401001
+		.contacts-b__form
+			+form()

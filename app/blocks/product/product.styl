@@ -1,0 +1,100 @@
+.product
+	padding-left 20px
+	&__title
+		margin-bottom 20px
+		font-size 23px
+	&__row
+		padding-bottom 40px
+		clearfix()
+	&__left
+		float left
+		width ratio-percentage(415,850)
+		+r($t-s)
+			float none
+			width auto
+	&__right
+		margin-left 20px
+		float left
+		width 368px
+		width ratio-percentage(368,850)
+		+r($t-s)
+			margin-left 0
+			float none
+			width auto
+		// display inline-block
+		// vertical-align top
+	&__image
+		margin-right 20px
+		margin-bottom 20px
+		padding 20px
+		// width 415px
+		width 100%
+		// min-height 300px
+		float left
+		background #EFEFF0
+		img
+			max-width 100%
+			height auto
+	&__specs
+		margin-bottom 30px
+	&__specs-item
+		margin-bottom 2px
+		span
+			padding-right 5px
+			font-family $cB
+			font-weight normal
+	&__desc
+		margin-bottom 35px
+		line-height 20px
+	&__price-w
+		width 208px
+		text-align center
+	&__price
+		margin-bottom 28px
+		font-family $cB
+		font-weight normal
+		font-size 23px
+
+	&__button
+		@extends .button
+		width 208px
+		font-size 17px
+	&__details,
+	&__opt
+		border 1px solid #cecece
+		margin-right 16px
+		padding 35px 20px
+		display inline-block
+		vertical-align top
+		width 392px
+		width ratio-percentage(392,850)
+		min-height 100vh
+		+r($t-s)
+			margin-right 0
+			margin-bottom 10px
+			width auto
+
+	// &__details
+
+	&__details-title
+		margin-bottom 15px
+		font-size 23px
+	// &__details-list
+
+	&__details-item
+		margin-bottom 5px
+		span
+			padding-right 5px
+			font-family $cB
+			font-weight normal
+
+	&__opt
+		margin-right 0
+
+	&__opt-title
+		margin-bottom 15px
+		font-size 23px
+	// &__opt-list
+
+	&__opt-item
+		margin-bottom 5px

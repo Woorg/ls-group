@@ -1,2 +1,12 @@
 mixin form()
-	.form
+	.form.form_callback
+		.form__title Форма обратной связи
+		form(action="", method="post")
+			input.form__field.form__field_text(type="text", value="", placeholder="Ваше имя" required)
+			input.form__field.form__field_text(type="text", value="", placeholder="E-mail" required)
+			textarea.form__field.form__field_textarea(name="message" placeholder="Сообщение" )
+			input.form__field.form__field_submit(type="submit", value="Отправить")
+			label.form__privacy(for="privacy-check")
+				input.form__checkbox#privacy-check(type="checkbox", name="privacy" required)
+				span.form__privacy-text Я соглашаюсь на обработку персональных данных
+
